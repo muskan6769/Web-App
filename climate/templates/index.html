@@ -1,0 +1,25 @@
+<body>
+    <h1>Select the required option:</h1>
+    <form method='POST' action='/topic'>
+        {% csrf_token %}
+    <input type="submit" value="Max temp" name="topic">
+    <input type="submit" value="Min temp" name="topic">
+    <input type="submit" value="Mean temp" name="topic">
+    </form>
+    
+    <h1>Select the required time zone:</h1>
+    <form method="POST" action="/time">
+        {%csrf_token%}
+    <input type="submit" value="1900-2000" name="zone">
+    <input type="submit" value="2000-2016" name="zone">
+    </form>
+
+    <h1>Select the required type of graph:</h1>
+    <form method="POST" action="/plot">
+        {%csrf_token%}
+    <input type="submit" value="line-graph" name="graph">
+    <input type="submit" value="scatter-plot" name="graph">
+    <input type="submit" value="histogram" name="graph">
+    </form>
+
+</body>
